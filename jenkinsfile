@@ -104,9 +104,16 @@ node {
                                                             rmsg = bat returnStatus: true, script: "\"${toolbelt}\" force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
 
                                              }
-
-                                             println rmsg
-
+                                             if(rmsg != 0)
+                                             {
+                                                  println ('************ERROR********* Deployment failed!!!!!!!!!!!!!!!!!')
+                                             }
+                                             else
+                                             {
+                                                  println rmsg
+                                                  dStatus = bat returnStatus: true, script: "\"${toolbelt}\" force:mdapi:deploy:report -u ${HUB_ORG}" 
+                                             }
+                                             println dStatus
                                              println('Hello from a job DSL script')
 
                                              println(rmsg)
