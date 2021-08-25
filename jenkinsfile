@@ -105,7 +105,7 @@ node {
 
                                              }
 
-                                             printf rmsg
+                                             println rmsg
 
                                              println('Hello from a job DSL script')
 
