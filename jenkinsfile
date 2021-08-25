@@ -19,6 +19,7 @@ node {
                def JWT_KEY_CRED_ID=env.JWT_CRED_ID_DH
 
                def CONNECTED_APP_CONSUMER_KEY="3MVG9fe4g9fhX0E6M7bLgj6WoQ82yvjGFecmpkDmp.krk5HgnjDIBf9m3C7r34USujvjsQAse4xOJxPhtuhMH"
+               def SFDX_HOME=env.SFDX_HOME
 
               
 
@@ -69,7 +70,7 @@ node {
                                              else
 
                                              {
-                                                            bat "\"${toolbelt}\" update"
+                                                            bat "${SFDX_HOME}\bin\sfdx update"
                                                             rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
 
                                              }
