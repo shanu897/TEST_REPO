@@ -33,7 +33,7 @@ node {
                println CONNECTED_APP_CONSUMER_KEY
 
               
-
+               println env.toolbelt
                def toolbelt = env.toolbelt
 
               
