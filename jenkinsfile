@@ -70,7 +70,7 @@ node {
                                              else
 
                                              {
-                                                            bat "${SFDX_HOME}\bin\sfdx update"
+                                                            bat "${SFDX_HOME}\\bin\\sfdx update"
                                                             rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
 
                                              }
