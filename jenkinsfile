@@ -34,7 +34,7 @@ node {
 
               
 
-               def toolbelt = tool 'toolbelt'
+               def toolbelt = env.toolbelt
 
               
 
