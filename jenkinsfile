@@ -33,8 +33,8 @@ node {
                println CONNECTED_APP_CONSUMER_KEY
 
               
-               println env.toolbelt
-               def toolbelt = env.toolbelt
+               println env.SFDX_CLI
+               def toolbelt = env.SFDX_CLI
 
               
 
