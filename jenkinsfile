@@ -70,11 +70,13 @@ node {
 
                                              {
                                                             bat "${toolbelt} update"
+                                                            rcU1 = bat returnStatus: true, script: "\"${toolbelt}\" update"
                                                             rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
 
                                              }
 
                                              println rc
+                                             println rcU1
 
                                              if(rc != 0)
 
@@ -104,7 +106,7 @@ node {
 
                                              }
 
-                                             printf rmsg
+                                             println rmsg
 
                                              println('Hello from a job DSL script')
 
