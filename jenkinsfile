@@ -101,7 +101,7 @@ node {
 
                                              {
 
-                                                            rmsg = bat returnStatus: true, script: "\"${toolbelt}\" force:mdapi:deploy -d force-app/main/default/. -u ${HUB_ORG}"
+                                                            rmsg = bat returnStatus: true, script: "\"${toolbelt}\" force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
 
                                              }
 
