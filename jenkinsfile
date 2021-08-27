@@ -103,7 +103,7 @@ node {
 
                                              {
 
-                                                           #rmsg = bat returnStatus: true, script: "\"${toolbelt}\" force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
+                                                           
                                                            rmsg = bat returnStatus: true, script: "\"${toolbelt}\" force:source:deploy -p force-app -u ${HUB_ORG} --testlevel RunLocalTests -c"
 
                                              }
